@@ -1,4 +1,4 @@
-export interface FetchYoutubeResponse {
+export interface FetchYoutubeChannelResponse {
   kind: string;
   etag: string;
   pageInfo: PageInfo;
