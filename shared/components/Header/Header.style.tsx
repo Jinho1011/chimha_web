@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   height: 40px;
   display: flex;
   justify-content: center;

@@ -2,8 +2,10 @@ import type { AppProps } from "next/app";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { useState } from "react";
-import { Global, css } from "@emotion/react";
+import { Global } from "@emotion/react";
+
 import styles from "../public/styles/global.style";
+import Layout from "../shared/components/layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -23,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <QueryClientProvider client={queryClient}>
         <Global styles={styles} />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </>

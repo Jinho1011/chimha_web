@@ -129,6 +129,7 @@ const reset = css`
 
 const global = css`
   body {
+    background-color: #eceff4;
     font-family: "Noto Sans KR", sans-serif;
   }
 `;
