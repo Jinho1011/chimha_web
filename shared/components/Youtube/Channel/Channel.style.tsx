@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const ChannelWrapper = styled.section``;
 
 export const ChannelContainer = styled.div``;
 
-export const ChannelThunb = styled.img``;
+export const ChannelThumb = styled.img``;
 
 export const ChannelTitleContainer = styled.div``;
 

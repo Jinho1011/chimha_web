@@ -1,20 +1,8 @@
-import { AxiosError } from "axios";
-import { useQuery, UseQueryOptions } from "react-query";
-import { getChannelInfo } from "../../service/api/youtube";
-import { FetchYoutubeChannelResponse } from "../interfaces/youtube.interface";
+import { useQuery } from 'react-query';
+import { getChannelInfo } from '../../service/api/youtube';
 
-export const useChannel = (
-  channelId: string,
-  queryOptions?: UseQueryOptions<
-    FetchYoutubeChannelResponse,
-    unknown,
-    AxiosError,
-    ["channel", string]
-  >
-) => {
-  return useQuery(
-    ["channel", channelId],
-    () => getChannelInfo(channelId),
-    queryOptions
-  );
+export const useChannel = (channelId: string, queryOptions?: any) => {
+  return useQuery(['channel', channelId], () => getChannelInfo(channelId), {
+    ...queryOptions,
+  });
 };

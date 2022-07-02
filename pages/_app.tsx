@@ -1,11 +1,11 @@
-import type { AppProps } from "next/app";
-import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
-import { useState } from "react";
-import { Global } from "@emotion/react";
+import type { AppProps } from 'next/app';
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { useState } from 'react';
+import { Global } from '@emotion/react';
 
-import styles from "../public/styles/global.style";
-import Layout from "../shared/components/Layout";
+import styles from '../public/styles/global.style';
+import Layout from '../shared/components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -13,8 +13,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       new QueryClient({
         defaultOptions: {
           queries: {
-            refetchOnWindowFocus: false,
-            suspense: true,
             staleTime: 5 * 60 * 1000,
           },
         },
