@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { ChannelWrapper } from '../shared/components/Youtube/Channel/Channel.style';
+import { ChannelWrapper } from '../shared/components/Youtube/Channel/styles';
 import { channel_ids } from '../shared/constants/youtube';
 
 import Title from '../shared/components/Common/Title';

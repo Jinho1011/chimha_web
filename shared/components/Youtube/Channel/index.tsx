@@ -5,7 +5,7 @@ import {
   ChannelThumb,
   ChannelTitle,
   ChannelTitleContainer,
-} from './Channel.style';
+} from './styles';
 
 interface ChannelProps {
   id: string;
