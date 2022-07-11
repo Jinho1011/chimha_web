@@ -14,18 +14,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      // service
+      "@api/*": ["service/api/*"],
+      // shared
+      "@components/*": ["shared/components/*"],
+      "@hooks/*": ["shared/hooks/*"],
+      "@interfaces/*": ["shared/interfaces/*"],
+      "@constants/*": ["shared/constants/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
-  "baseUrl": ".",
-  "paths": {
-    // service
-    "@api/*": ["service/api/*"],
-    // shared
-    "@components/*": ["shared/components/*"],
-    "@hooks/*": ["shared/hooks/*"],
-    "@interfaces/*": ["shared/interfaces/*"],
-    "@constants/*": ["shared/constants/*"]
-  }
+  "exclude": ["node_modules"]
 }
