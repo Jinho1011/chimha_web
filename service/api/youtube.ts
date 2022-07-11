@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { FetchYoutubeChannelResponse } from '@interfaces/channel.interface';
 import { YOUTUBE_KEY } from './api.key';
+import { FetchYoutubeChannelResponse } from '@interfaces/channel.interface';
 import { FetchYoutubePlayListResponse } from '@interfaces/playlist.interface';
 
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
