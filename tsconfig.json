@@ -17,5 +17,15 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "baseUrl": ".",
+  "paths": {
+    // service
+    "@api/*": ["service/api/*"],
+    // shared
+    "@components/*": ["shared/components/*"],
+    "@hooks/*": ["shared/hooks/*"],
+    "@interfaces/*": ["shared/interfaces/*"],
+    "@constants/*": ["shared/constants/*"]
+  }
 }
