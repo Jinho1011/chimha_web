@@ -1,9 +1,12 @@
-interface MediaProps {
-  id: string;
-}
+import Section from '@components/Common/Section';
+import Title from '@components/Common/Title';
 
-const Channel = ({ id }: MediaProps) => {
-  return <></>;
+const Media = () => {
+  return (
+    <Section>
+      <Title title='Media' subtitle='침착맨 외부 방송' />
+    </Section>
+  );
 };
 
-export default Channel;
+export default Media;
