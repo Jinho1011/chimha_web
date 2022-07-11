@@ -1,40 +1,21 @@
-import { useChannel } from '../../../hooks/useYoutube';
-import {
-  ChannelContainer,
-  ChannelDesc,
-  ChannelThumb,
-  ChannelTitle,
-  ChannelTitleContainer,
-} from './styles';
+import type { NextPage } from 'next';
+import { ChannelWrapper } from '@components/Youtube/Channel/styles';
+import { channel_ids } from '@constants/youtube';
 
-interface ChannelProps {
-  id: string;
-}
+import Title from '@components/Common/Title';
+import Item from './Item';
 
-const Channel = ({ id }: ChannelProps) => {
-  const channelQuery = useChannel(id, {
-    retry: false,
-  });
-
-  if (channelQuery.isLoading || channelQuery.isIdle) {
-    return <ChannelContainer>loading..</ChannelContainer>;
-  }
-
-  if (channelQuery.isError) {
-    return <ChannelContainer>error..</ChannelContainer>;
-  }
-
-  const data = channelQuery.data.items[0].snippet;
-
+const Youtube: NextPage = () => {
   return (
-    <ChannelContainer>
-      <ChannelThumb src={data.thumbnails.default.url} />
-      <ChannelTitleContainer>
-        <ChannelTitle>{data.title}</ChannelTitle>
-        <ChannelDesc>{data.description}</ChannelDesc>
-      </ChannelTitleContainer>
-    </ChannelContainer>
+    <>
+      <Title title='Youtube' subtitle='침투부 채널' />
+      <ChannelWrapper>
+        {channel_ids.map((channel) => {
+          return <Item id={channel.id} key={channel.id} />;
+        })}
+      </ChannelWrapper>
+    </>
   );
 };
 
-export default Channel;
+export default Youtube;

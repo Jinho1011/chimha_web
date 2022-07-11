@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FetchYoutubeChannelResponse } from '../../shared/interfaces/youtube.interface';
+import { FetchYoutubeChannelResponse } from '@interfaces/youtube.interface';
 import { YOUTUBE_KEY } from './api.key';
 
 export const getChannelInfo = async (

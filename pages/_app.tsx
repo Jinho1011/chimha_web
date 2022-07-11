@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Global } from '@emotion/react';
 
 import styles from '../public/styles/global.style';
-import Layout from '../shared/components/Layout';
+import Layout from '@components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
