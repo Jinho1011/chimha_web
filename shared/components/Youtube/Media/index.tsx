@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+import { MediaWrapper } from './styles';
 import { media_ids } from '@constants/youtube';
 import Section from '@components/Common/Section';
 import Title from '@components/Common/Title';
@@ -19,9 +20,3 @@ const Media = () => {
 };
 
 export default Media;
-
-const MediaWrapper = styled.div`
-  display: grid;
-  gap: 2rem 1rem;
-  grid-template-columns: 1fr 1fr;
-`;
