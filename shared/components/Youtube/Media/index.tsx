@@ -1,5 +1,3 @@
-import styled from '@emotion/styled';
-
 import { MediaWrapper } from './styles';
 import { media_ids } from '@constants/youtube';
 import Section from '@components/Common/Section';
