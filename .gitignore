@@ -1,5 +1,6 @@
 # chimha_web
 api.key.ts
+.env
 
 # dependencies
 /node_modules
