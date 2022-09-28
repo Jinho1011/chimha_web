@@ -16,6 +16,10 @@ const Channel = ({ id }: ChannelProps) => {
     retry: false,
   });
 
+  const navigateToChannel = (link:string) => {
+    window.location.assign(`https://www.youtube.com/user/${link}`)
+  }
+
   if (channelQuery.isLoading || channelQuery.isIdle) {
     return <ChannelContainer>loading..</ChannelContainer>;
   }
@@ -26,8 +30,10 @@ const Channel = ({ id }: ChannelProps) => {
 
   const data = channelQuery.data.items[0].snippet;
 
+  console.log(channelQuery.data.items[0])
+
   return (
-    <ChannelContainer>
+    <ChannelContainer onClick={() => navigateToChannel("")}>
       <ChannelThumb src={data.thumbnails.default.url} />
       <ChannelTitleContainer>
         <ChannelTitle>{data.title}</ChannelTitle>
