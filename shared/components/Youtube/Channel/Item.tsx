@@ -1,11 +1,11 @@
-import { useChannel } from '@hooks/useYoutube';
+import { useChannel } from "@hooks/useYoutube";
 import {
   ChannelContainer,
   ChannelDesc,
   ChannelThumb,
   ChannelTitle,
   ChannelTitleContainer,
-} from './styles';
+} from "./styles";
 
 interface ChannelProps {
   id: string;
@@ -16,9 +16,9 @@ const Channel = ({ id }: ChannelProps) => {
     retry: false,
   });
 
-  const navigateToChannel = (link:string) => {
-    window.location.assign(`https://www.youtube.com/user/${link}`)
-  }
+  const navigateToChannel = (link: string) => {
+    window.location.assign(`https://www.youtube.com/user/${link}`);
+  };
 
   if (channelQuery.isLoading || channelQuery.isIdle) {
     return <ChannelContainer>loading..</ChannelContainer>;
@@ -29,8 +29,6 @@ const Channel = ({ id }: ChannelProps) => {
   }
 
   const data = channelQuery.data.items[0].snippet;
-
-  console.log(channelQuery.data.items[0])
 
   return (
     <ChannelContainer onClick={() => navigateToChannel("")}>
