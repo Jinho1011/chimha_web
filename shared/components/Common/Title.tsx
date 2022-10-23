@@ -1,16 +1,5 @@
 import styled from '@emotion/styled';
 
-const Title = ({ title, subtitle }: { title: string; subtitle: string }) => {
-  return (
-    <TitleContainer>
-      <TitleText>{title}</TitleText>
-      <SubtitleText>{subtitle}</SubtitleText>
-    </TitleContainer>
-  );
-};
-
-export default Title;
-
 const TitleContainer = styled.div`
   display: flex;
   align-items: baseline;
@@ -23,7 +12,7 @@ const TitleText = styled.h2`
   font-size: 1.8rem;
 `;
 
-const SubtitleText = styled.h3`
+export const SubtitleText = styled.h3`
   font-weight: 400;
   font-size: 1rem;
   color: #9c9c9c;
