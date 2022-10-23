@@ -1,12 +1,12 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-export const ChannelWrapper = styled.section`
+const ChannelWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
 `;
 
-export const ChannelContainer = styled.div`
+const ChannelContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -15,25 +15,34 @@ export const ChannelContainer = styled.div`
   background-color: #f5f5f5;
 `;
 
-export const ChannelThumb = styled.img`
+const ChannelThumb = styled.img`
   width: 3.6rem;
   height: 3.6rem;
   border-radius: 50%;
 `;
 
-export const ChannelTitleContainer = styled.div`
+const ChannelTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
 `;
 
-export const ChannelTitle = styled.h4`
+const ChannelTitle = styled.h4`
   font-weight: 400;
   font-size: 1.2rem;
 `;
 
-export const ChannelDesc = styled.p`
+const ChannelDesc = styled.p`
   font-weight: 400;
   font-size: 1rem;
   color: #999999;
 `;
+
+export {
+  ChannelWrapper,
+  ChannelContainer,
+  ChannelThumb,
+  ChannelTitleContainer,
+  ChannelTitle,
+  ChannelDesc,
+};
